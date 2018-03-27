@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
+import { Dropdown, NavItem, Button } from 'react-materialize'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  componentDidMount() {
-
-  }
-
-  componentWillReceiveProps(nextProps) {
-
-  }
-
   render() {
     return (
-      <div>New component</div>
+      <div>
+        <Dropdown trigger={
+            <Button>Drop me!</Button>
+          }>
+          <NavItem>one</NavItem>
+          <NavItem>two</NavItem>
+          <NavItem divider />
+          <NavItem>three</NavItem>
+        </Dropdown>
+      </div>
     )
   }
 }
