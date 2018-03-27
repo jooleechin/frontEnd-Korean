@@ -28,13 +28,13 @@ class Learn extends Component {
     return (
       <div>
       <Row>
-          <Col s={12} m={5}>
-              <CardPanel className="teal lighten-4 black-text">
-                  <span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks ㅏㅏㅏokok.</span>
+          <Col m={5} >
+              <CardPanel className="teal lighten-4 black-text tc">
+                  <span className="learnSymbol">{this.state.symbol}</span><br />
+                  <span className="learnPronoun">{this.state.pronounciation}</span>
               </CardPanel>
           </Col>
       </Row>
-        <div>{this.state.symbol} {this.state.pronounciation}</div>
       </div>
     )
   }

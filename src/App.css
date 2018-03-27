@@ -6,10 +6,6 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
 .hanja {
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
@@ -44,4 +40,14 @@
   max-width: 75%;
   z-index: 99;
   font-size: 35px;
+}
+
+/* learn.js cards */
+.learnSymbol {
+  font-size: 80px;
+}
+
+.learnPronoun {
+  font-size: 70px;
+  font-family: 'Montserrat', sans-serif;
 }
