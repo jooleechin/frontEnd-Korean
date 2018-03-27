@@ -1,10 +1,4 @@
 
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -16,15 +10,24 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.hanja {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: #698996;
 }
 
 .learnK {
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  font-size: 60px;
+  font-size: 70px;
   z-index: 0;
+  color: #C99DA3;
+  opacity: .33;
+}
+
+.learnK h1{
+  line-height: 89%;
 }
 
 .description {
@@ -32,12 +35,13 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
 }
 
 .description h3{
+  color: #698996;
   position: absolute;
-  top: 37%;
+  top: 39%;
   max-width: 75%;
   z-index: 99;
+  font-size: 35px;
 }

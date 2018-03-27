@@ -5,16 +5,18 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Row>
+        <Row className="pt4 pl2">
+          <Col s={1}>
             <Dropdown trigger={
-                <Button className="bg-blue"><i class="fas fa-bars"></i></Button>
+                <Button ><i class="fas fa-bars"></i></Button>
               }>
               <NavItem>how it works</NavItem>
               <NavItem>learn</NavItem>
               <NavItem>signup</NavItem>
             </Dropdown>
-          <Col s={12} className="tc">
-            <h1>hån(:)jå</h1>
+          </Col>
+          <Col s={10}>
+            <h1 className="hanja tracked tc mt0">hån(:)jå</h1>
           </Col>
         </Row>
       </div>
