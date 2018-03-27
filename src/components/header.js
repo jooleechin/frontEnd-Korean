@@ -8,7 +8,7 @@ class Header extends Component {
         <Row className="pt4 pl2">
           <Col s={1}>
             <Dropdown trigger={
-                <Button ><i class="fas fa-bars"></i></Button>
+                <Button ><i className="fas fa-bars"></i></Button>
               }>
               <NavItem>how it works</NavItem>
               <NavItem>learn</NavItem>
