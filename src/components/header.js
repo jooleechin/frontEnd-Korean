@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
-import { Dropdown, NavItem, Button } from 'react-materialize'
+import { Dropdown, NavItem, Button, Row, Col } from 'react-materialize'
 
 class Header extends Component {
   render() {
     return (
       <div>
-        <Dropdown trigger={
-            <Button>Drop me!</Button>
-          }>
-          <NavItem>one</NavItem>
-          <NavItem>two</NavItem>
-          <NavItem divider />
-          <NavItem>three</NavItem>
-        </Dropdown>
+        <Row className="pt4 pl2">
+          <Col s={1}>
+            <Dropdown trigger={
+                <Button ><i class="fas fa-bars"></i></Button>
+              }>
+              <NavItem>how it works</NavItem>
+              <NavItem>learn</NavItem>
+              <NavItem>signup</NavItem>
+            </Dropdown>
+          </Col>
+          <Col s={10}>
+            <h1 className="hanja tracked tc mt0">hån(:)jå</h1>
+          </Col>
+        </Row>
       </div>
     )
   }
