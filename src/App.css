@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -22,7 +20,24 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.learnK {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  z-index: 0;
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.description h3{
+  position: absolute;
+  top: 37%;
+  max-width: 75%;
+  z-index: 99;
 }
