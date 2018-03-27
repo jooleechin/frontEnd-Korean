@@ -13,7 +13,7 @@ class Learn extends Component {
      axios.get(`http://localhost:3000/learn/1`)
        .then((response) => {
          console.log('test', response)
-         console.log('snarf', response.data.learn.symbol)
+         console.log('snarf', response.data.learn)
          const info = response.data;
          this.setState({ info })
        })
@@ -25,7 +25,7 @@ class Learn extends Component {
           <Col s={12} m={5}>
 
               <CardPanel className="teal lighten-4 black-text">
-                  <span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks ㅏㅏㅏokok {this.state.info.learn.symbol}.</span>
+                  <span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks ㅏㅏㅏokok.</span>
               </CardPanel>
 
           </Col>
