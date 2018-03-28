@@ -10,6 +10,7 @@ nanobar.go(percentage)
 
 class Learn extends Component {
   state = {
+     number: 1,
      info: [],
      learn: '',
      symbol: '',
@@ -42,9 +43,12 @@ class Learn extends Component {
         <div className="previous">
           <Button onClick={(e) => {
             e.preventDefault()
-            percentage -= 1.67
-            nanobar.go(percentage)
+            if(number > 1) {
             number--
+            percentage -= 1.67
+            }
+            
+            nanobar.go(percentage)
             this.componentDidMount()
           }} waves='light'>Previous
           </Button>
