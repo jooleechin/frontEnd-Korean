@@ -1,37 +1,34 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class Login extends Component {
-  loginCheck(e) {
+  loginCheck = (e) => {
     e.preventDefault()
     let email = e.target.email.value
     let password = e.target.password.value
     axios.post('/login', { email, password })
     .then (data => {
+      let id = data.data.matches.id
+      let name = data.data.matches.fName
       if (data.data.matches) {
-        sessionStorage.setItem('u')
+        this.props.saveUser(id, name, email)
+      } else {
+        alert('Your password is not correct!')
       }
     })
+    .catch(e => console.log(e))
   }
-
-  // loginCheck(email, password) {
-  //   axios.post(`${baseURL}/login`, {email, password})
-  //   .then (data => {
-  //     console.log(data)
-  //   })
-  // }
-
-
-
   render() {
+    // console.log(this.props) this.props.history gets a list of different functions useful for redirection
     return(
-      <div>
+      <div className="box2">
         <form id="formLogin" onSubmit={this.loginCheck}>
-          <label for="email">email: </label>
+          <label for="email" className="calisto">email: </label>
             <input name="email" id="email" type="email" />
-          <label for="password">password: </label>
+          <label for="password" className="calisto">password: </label>
             <input name="password" id="password" type="password" />
-          <input type="submit" value="submit"/>
+          <input type="submit" value="submit" />
         </form>
       </div>
     )

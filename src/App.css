@@ -110,3 +110,17 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #698996;
 }
+
+/* login.js styles */
+.box2 {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#formLogin label{
+  font-size: 40px;
+}
+
+#formLogin input {
+  font-size: 30px;
+}
