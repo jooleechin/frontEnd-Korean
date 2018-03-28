@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import { Row, Col, CardPanel } from 'react-materialize'
+import { Row, Col, CardPanel, Button } from 'react-materialize'
 
+var number = 1
 
 class Learn extends Component {
   state = {
@@ -13,7 +14,7 @@ class Learn extends Component {
    }
 
    componentDidMount() {
-     axios.get(`http://localhost:3000/learn/1`)
+     axios.get(`http://localhost:3000/learn/${number}`)
        .then((response) => {
          console.log('test', response.data.learn)
          const info = response.data;
@@ -35,6 +36,24 @@ class Learn extends Component {
               </CardPanel>
           </Col>
       </Row>
+      <div>
+    <Button onClick={(e) => {
+      console.log(number)
+          e.preventDefault()
+          number--
+          this.componentDidMount()
+        }} waves='light'>Previous
+    </Button>
+
+      </div>
+      <div>
+    <Button onClick={(e) => {
+      console.log(number)
+          e.preventDefault()
+          number++
+          this.componentDidMount()
+        }} waves='light'>Next</Button>
+      </div>
       </div>
     )
   }
