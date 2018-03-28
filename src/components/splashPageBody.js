@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class SplashpageBody extends Component {
   render() {
     return(
