@@ -12,11 +12,14 @@ class Header extends Component {
               }>
               <NavItem className="dropDowns">how it works</NavItem>
               <NavItem>learn</NavItem>
-              <NavItem>signup</NavItem>
+              <NavItem>quiz</NavItem>
             </Dropdown>
           </Col>
           <Col s={10}>
             <h1 className="hanja tracked tc mt0">hån(:)jå</h1>
+          </Col>
+          <Col s={1}>
+            <h1 className="signLog tracked calisto">login</h1>
           </Col>
         </Row>
       </div>
