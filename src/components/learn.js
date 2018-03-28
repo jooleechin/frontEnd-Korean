@@ -7,6 +7,7 @@ var number = 1
 
 class Learn extends Component {
   state = {
+     number: 1,
      info: [],
      learn: '',
      symbol: '',
@@ -41,7 +42,9 @@ class Learn extends Component {
     <Button onClick={(e) => {
       console.log(number)
           e.preventDefault()
-          number--
+          if(number > 1) {
+            number--
+          }
           this.componentDidMount()
         }} waves='light'>Previous
     </Button>
