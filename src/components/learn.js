@@ -15,6 +15,7 @@ class Learn extends Component {
      symbol: '',
      pronounciation: ''
   }
+
   componentDidMount() {
      axios.get(`http://localhost:3000/learn/${number}`)
        .then((response) => {
