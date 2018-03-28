@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './components/header'
 import SplashpageBody from './components/SplashpageBody'
 import Learn from './components/learn'
+import Login from './components/Login'
 
 class App extends Component {
   render() {
@@ -12,8 +13,9 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Header />
-          <Route exact path="/" component={SplashpageBody}/>
-          <Route path="/learn" component={Learn}/>
+          <Route exact path="/" component={SplashpageBody} />
+          <Route path="/learn" component={Learn} />
+          <Route exact path="/login" component={Login} />
         </div>
       </BrowserRouter>
     );
