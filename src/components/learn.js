@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import Nanobar from 'nanobar'
 import { Row, Col, CardPanel, Button } from 'react-materialize'
 
+var nanobar = new Nanobar()
 var number = 1
+var percentage = 1.67
+nanobar.go(percentage)
 
 class Learn extends Component {
   state = {
@@ -12,9 +15,8 @@ class Learn extends Component {
      learn: '',
      symbol: '',
      pronounciation: ''
-   }
-
-   componentDidMount() {
+  }
+  componentDidMount() {
      axios.get(`http://localhost:3000/learn/${number}`)
        .then((response) => {
          console.log('test', response.data.learn)
@@ -24,41 +26,45 @@ class Learn extends Component {
            pronounciation: info.learn.pronounciation
          })
        })
-   }
+  }
   render() {
     console.log('state', this.state)
     return (
-      <div className="pt5">
+      <div>
       <Row className='column'>
           <Col>
-              <CardPanel className="teal lighten-4 black-text tc card">
-                <span className="learnSymbol">{this.state.symbol}</span>
-                <div>  <br /></div>
-                <span className="learnPronoun">{this.state.pronounciation}</span>
-              </CardPanel>
+            <CardPanel className="teal lighten-4 black-text tc card">
+              <span className="learnSymbol">{this.state.symbol}</span><br /><br />
+              <span className="learnPronoun">{this.state.pronounciation}</span>
+            </CardPanel>
           </Col>
       </Row>
-      <div>
-    <Button onClick={(e) => {
-      console.log(number)
-          e.preventDefault()
-          if(number > 1) {
+      <div className="navigateButt">
+        <div className="previous">
+          <Button onClick={(e) => {
+            e.preventDefault()
+            if(number > 1) {
             number--
-          }
-          this.componentDidMount()
-        }} waves='light'>Previous
-    </Button>
-
+            percentage -= 1.67
+            }
+            
+            nanobar.go(percentage)
+            this.componentDidMount()
+          }} waves='light'>Previous
+          </Button>
+        </div>
+        <div className="next">
+          <Button onClick={(e) => {
+            e.preventDefault()
+            percentage += 1.67
+            nanobar.go(percentage)
+            number++
+            this.componentDidMount()
+          }} waves='light'>Next
+          </Button>
+        </div>
       </div>
-      <div>
-    <Button onClick={(e) => {
-      console.log(number)
-          e.preventDefault()
-          number++
-          this.componentDidMount()
-        }} waves='light'>Next</Button>
-      </div>
-      </div>
+    </div>
     )
   }
 }
