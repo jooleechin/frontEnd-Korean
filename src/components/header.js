@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Dropdown, NavItem, Button, Row, Col } from 'react-materialize'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -16,13 +17,10 @@ class Header extends Component {
             </Dropdown>
           </Col>
           <Col s={10}>
-            <h1 className="hanja tracked tc mt0">hån(:)jå</h1>
+            <Link to="/"><h1 className="hanja grow tracked tc mt0">hån(:)jå</h1></Link>
           </Col>
           <Col s={1}>
-            <h1 className="signLog tracked calisto" onClick={(e) => {
-              e.preventDefault()
-              console.log('hi')
-            }}>login</h1>
+            <Link to="/Login"><h1 className="signLog tracked athelas pointer grow">login</h1></Link>
           </Col>
         </Row>
       </div>
