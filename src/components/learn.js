@@ -26,12 +26,11 @@ class Learn extends Component {
   render() {
     console.log('state', this.state)
     return (
-      <div className="pt5">
+      <div>
       <Row className='column'>
           <Col>
               <CardPanel className="teal lighten-4 black-text tc card">
-                <span className="learnSymbol">{this.state.symbol}</span>
-                <div>  <br /></div>
+                <span className="learnSymbol">{this.state.symbol}</span><br /><br />
                 <span className="learnPronoun">{this.state.pronounciation}</span>
               </CardPanel>
           </Col>
