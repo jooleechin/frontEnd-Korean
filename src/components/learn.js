@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Nanobar from 'nanobar'
 import { Row, Col, CardPanel, Button } from 'react-materialize'
-
-var nanobar = new Nanobar()
-var number = 1
-var percentage = 2.5
-nanobar.go(percentage)
+let nanobar = new Nanobar()
+let number = 1
+let percentage = 2.5
 
 class Learn extends Component {
+
   state = {
      number: 1,
      info: [],
@@ -29,6 +28,7 @@ class Learn extends Component {
   }
   render() {
     console.log('state', this.state)
+    nanobar.go(percentage)
     return (
       <div>
       <Row className='column'>
