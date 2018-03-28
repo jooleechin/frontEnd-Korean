@@ -43,6 +43,15 @@
 }
 
 /* learn.js cards */
+.column {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 80px 250px 80px 250px;
+}
+
 .learnSymbol {
   font-size: 80px;
 }
