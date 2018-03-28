@@ -4,13 +4,13 @@ import { Dropdown, NavItem, Button, Row, Col } from 'react-materialize'
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="box">
         <Row className="pt4 pl2">
           <Col s={1}>
             <Dropdown trigger={
-                <Button ><i className="fas fa-bars"></i></Button>
+                <Button className="editButt"><i className="fas fa-bars"></i></Button>
               }>
-              <NavItem>how it works</NavItem>
+              <NavItem className="dropDowns">how it works</NavItem>
               <NavItem>learn</NavItem>
               <NavItem>signup</NavItem>
             </Dropdown>
