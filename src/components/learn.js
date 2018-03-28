@@ -5,7 +5,7 @@ import { Row, Col, CardPanel, Button } from 'react-materialize'
 
 var nanobar = new Nanobar()
 var number = 1
-var percentage = 1.67
+var percentage = 2.5
 nanobar.go(percentage)
 
 class Learn extends Component {
@@ -33,36 +33,33 @@ class Learn extends Component {
       <div>
       <Row className='column'>
           <Col>
-            <CardPanel className="teal lighten-4 black-text tc card">
+            <CardPanel className="pinkColor lighten-4 black-text tc card">
               <span className="learnSymbol">{this.state.symbol}</span><br /><br />
               <span className="learnPronoun">{this.state.pronounciation}</span>
             </CardPanel>
           </Col>
       </Row>
       <div className="navigateButt">
-        <div className="previous">
-          <Button onClick={(e) => {
-            e.preventDefault()
-            if(number > 1) {
+        <Button className="previous tracked"onClick={(e) => {
+          e.preventDefault()
+          if(number > 1) {
             number--
-            percentage -= 1.67
-            }
-            
-            nanobar.go(percentage)
-            this.componentDidMount()
-          }} waves='light'>Previous
-          </Button>
-        </div>
-        <div className="next">
-          <Button onClick={(e) => {
-            e.preventDefault()
-            percentage += 1.67
-            nanobar.go(percentage)
+            percentage -= 2.5
+          }
+          nanobar.go(percentage)
+          this.componentDidMount()
+        }} waves='light'>Previous
+        </Button>
+        <Button className="next tracked" onClick={(e) => {
+          e.preventDefault()
+          if (number < 40) {
             number++
-            this.componentDidMount()
-          }} waves='light'>Next
-          </Button>
-        </div>
+            percentage += 2.5
+          }
+          nanobar.go(percentage)
+          this.componentDidMount()
+        }} waves='light'>Next
+        </Button>
       </div>
     </div>
     )
