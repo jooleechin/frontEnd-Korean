@@ -1,16 +1,11 @@
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
 .hanja {
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 600;
   color: #698996;
+  padding-bottom: 3%;
 }
 
 .learnK {
