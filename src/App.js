@@ -18,7 +18,6 @@ class App extends Component {
     }
   }
   saveUser = (id, fName, email) => {
-    console.log(id)
     this.setState({
       id: id,
       fName: fName,

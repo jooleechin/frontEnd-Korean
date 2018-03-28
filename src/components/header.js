@@ -19,7 +19,7 @@ class Header extends Component {
               }>
               <NavItem className="dropDowns">how it works</NavItem>
               <Link to="/learn"><NavItem>learn</NavItem></Link>
-              <NavItem>quiz</NavItem>
+              <Link to="/quiz"><NavItem>quiz</NavItem></Link>
             </Dropdown>
           </Col>
           <Col s={10}>
