@@ -17,7 +17,6 @@ class Quiz extends Component {
   }
 
   test = (userGuess) => {
-    console.log(this.state)
     if(userGuess === this.state.answer) {
       console.log('correct answer', userGuess, this.state.answer)
     } else {
@@ -25,12 +24,12 @@ class Quiz extends Component {
     }
   }
 
+
+
   componentDidMount() {
      axios.get(`http://localhost:3000/questions/${number}`)
        .then((response) => {
-         console.log('test', response.data.question)
          const info = response.data;
-         console.log(info.question.question, info.question.a, info.question.b, info.question.c, info.question.d, info.question.answer)
          this.setState({
            question: info.question.question,
            a: info.question.a,
@@ -56,6 +55,7 @@ class Quiz extends Component {
               </Row>
             </CardPanel>
           </Col>
+          
       </Row>
 
     </div>
