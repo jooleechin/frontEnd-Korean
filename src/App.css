@@ -110,3 +110,48 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #698996;
 }
+
+/* login.js styles */
+.box2 {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#formLogin label{
+  font-size: 40px;
+}
+
+#formLogin input {
+  font-size: 30px;
+}
+
+/* quiz.js */
+.quizCard {
+  font-family: 'Montserrat', sans-serif;
+  width: 35%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0px;
+  color: white;
+}
+
+.quizSymbol {
+  margin: 0px;
+  font-size: 100px;
+  padding-bottom: 5%;
+}
+
+.allOptions {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.options {
+  border: 2px dotted black;
+  width: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
