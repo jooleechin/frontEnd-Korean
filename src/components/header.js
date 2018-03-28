@@ -19,7 +19,10 @@ class Header extends Component {
             <h1 className="hanja tracked tc mt0">hån(:)jå</h1>
           </Col>
           <Col s={1}>
-            <h1 className="signLog tracked calisto">login</h1>
+            <h1 className="signLog tracked calisto" onClick={(e) => {
+              e.preventDefault()
+              console.log('hi')
+            }}>login</h1>
           </Col>
         </Row>
       </div>
