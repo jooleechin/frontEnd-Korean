@@ -6,6 +6,7 @@ import Header from './components/header'
 import SplashpageBody from './components/SplashpageBody'
 import Learn from './components/learn'
 import Login from './components/Login'
+import Quiz from './components/quiz'
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends Component {
           <Header id={this.state.id} clearUser={this.clearUser}/>
           <Route exact path="/" component={SplashpageBody} />
           <Route path="/learn" component={Learn} />
+          <Route path="/quiz" component={Quiz} />
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />
