@@ -2,6 +2,7 @@
   "name": "frontend-korean",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "axios": "^0.18.0",
     "nanobar": "^0.4.2",
