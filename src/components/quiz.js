@@ -6,7 +6,6 @@ import Nanobar from 'nanobar'
 var number = 1
 
 const Next = (props) => {
-  // console.log(nextQuest)
   return (<Button onClick={(e) => {
     number++
     props.nextQuest()
@@ -47,7 +46,6 @@ class Quiz extends Component {
     if(userGuess === this.state.answer) {
       this.setState({[option]: 'correct'})
     } else {
-      console.log('wrong answer', userGuess, this.state.answer)
       let correct = ['a', 'b', 'c', 'd'].find(option => this.state[option] == this.state.answer) + 'Correct'
       this.setState({
         [option]: 'incorrect',
