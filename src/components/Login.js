@@ -13,6 +13,7 @@ class Login extends Component {
       let name = data.data.matches.fName
       if (data.data.matches) {
         this.props.saveUser(id, name, email)
+        this.props.history.push('/options')
       } else {
         alert('Your password is not correct!')
       }

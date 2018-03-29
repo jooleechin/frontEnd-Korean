@@ -18,7 +18,10 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 600;
-  color: #698996;
+  /* color: #CE796B; */
+  /* orange */
+  color: #2C2C54;
+  /* blue/black */
   padding-bottom: 3%;
 }
 
@@ -27,6 +30,9 @@
   width: 45px;
   transform: rotate(45deg);
   padding: 0px;
+  /* background-color: #2C2C54; */
+  background-color: #CE796B;
+  /* orange */
 }
 
 .fa-bars {
@@ -38,7 +44,9 @@
 }
 
 .signLog {
-  color: #698996;
+  color: #CE796B;
+  /* orange */
+  /* color: #2C2C54; */
   font-size: 20px;
   border: 3px solid;
   padding: 5px 10px;
@@ -50,6 +58,7 @@
 .learnK {
   position: relative;
   font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Hind', sans-serif; */
   font-size: 70px;
   z-index: 0;
   color: #C99DA3;
@@ -71,7 +80,8 @@
 }
 
 .description h3{
-  color: #698996;
+  /* color: #CE796B; */
+  color: #2C2C54;
   max-width: 75%;
   z-index: 99;
   font-size: 35px;
@@ -108,7 +118,7 @@
 .previous, .next{
   /* text-transform: lowercase; */
   font-family: 'Montserrat', sans-serif;
-  background-color: #698996;
+  background-color: #2C2C54;
 }
 
 /* login.js styles */
@@ -165,4 +175,40 @@
 
 .incorrect {
   background-color: #D33F49;
+}
+
+/* optionsView */
+.greeting{
+  /* font-family: 'Hind', sans-serif; */
+  /* font-weight: 600; */
+  font-family: 'Rufina', serif;
+  letter-spacing: 3px;
+  color: #CE796B;
+  padding-top: 3%;
+  font-size: 45px;
+}
+
+.butts {
+  padding-top: 5%;
+  font-size: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.butts h1 {
+  font-family: 'Hind', sans-serif;
+  font-weight: 700;
+  /* border-radius: 120px 10px 120px 10px; */
+  /* background-color: #C99DA3; */
+  color: #C99DA3;
+  text-shadow: 4px 4px #CE796B;
+  padding: 15px 40px;
+}
+
+.butts h1:hover {
+  opacity: .66;
 }
