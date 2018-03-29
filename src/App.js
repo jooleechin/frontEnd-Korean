@@ -7,6 +7,8 @@ import SplashpageBody from './components/SplashpageBody'
 import Learn from './components/learn'
 import Login from './components/Login'
 import Quiz from './components/quiz'
+import CreateAccount from './components/CreateAccount'
+import OptionsView from './components/OptionsView'
 
 class App extends Component {
   constructor(props) {
@@ -43,6 +45,8 @@ class App extends Component {
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />
+          <Route path="/signup" component={CreateAccount} />
+          <Route path='/options' component={OptionsView} />
         </div>
       </BrowserRouter>
     );

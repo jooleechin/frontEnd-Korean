@@ -128,7 +128,7 @@
 /* quiz.js */
 .quizCard {
   font-family: 'Montserrat', sans-serif;
-  width: 35%;
+  width: 40%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -153,5 +153,16 @@
   width: 140px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 40px;
+  font-size: 35px;
+}
+
+.correct {
+  /* background-color: #8A9B68; */
+  background-color: #749C75;
+  color: white;
+  border: 2px dotted black;
+}
+
+.incorrect {
+  background-color: #D33F49;
 }

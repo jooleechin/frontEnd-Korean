@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 class Header extends Component {
   changeToLogout() {
     return this.props.id
-      ?<Link to="/"><h1 className="signLog tracked athelas pointer grow">logout</h1></Link>
+      ?<Link to="/OptionsView"><h1 className="signLog tracked athelas pointer grow">logout</h1></Link>
       :<Link to="/Login"><h1 className="signLog tracked athelas pointer grow" >login</h1></Link>
   }
 
