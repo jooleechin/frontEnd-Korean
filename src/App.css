@@ -127,12 +127,40 @@
   margin-left: auto;
   margin-right: auto;
 }
-#formLogin label{
+#formLogin, #createForm label{
   font-size: 40px;
+  color: #C99DA3;
+  letter-spacing: 2px;
 }
 
-#formLogin input {
+#formLogin, #createForm input {
   font-size: 30px;
+}
+
+.submitOcreate {
+  display: flex;
+  justify-content: center;
+}
+
+#submit{
+  font-family: 'Hind', sans-serif;
+  font-size: 25px;
+  border: none;
+  color: #2C2C54;
+  letter-spacing: 2px;
+  border: 2px solid #C99DA3;
+  padding: 4px 7px;
+  margin-top: 2%;
+}
+
+.create {
+  color: #C99DA3;
+  font-size: 35px;
+}
+
+.create:hover {
+  color: #CE796B;
+  opacity: .66;
 }
 
 /* quiz.js */

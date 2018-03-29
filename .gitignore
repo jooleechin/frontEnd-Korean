@@ -20,3 +20,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+/* color: #CE796B; orange */
+color: #2C2C54; blue/black
+
+
+background-color: #C99DA3; /pink

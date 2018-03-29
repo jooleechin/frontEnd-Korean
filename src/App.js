@@ -45,7 +45,9 @@ class App extends Component {
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />
-          <Route path="/signup" component={CreateAccount} />
+          <Route path="/signup" render={props => {
+            return <CreateAccount saveUser={this.saveUser} {...props} />
+          }} />
           <Route path='/options' fName={this.state.fName} component={OptionsView} />
         </div>
       </BrowserRouter>
