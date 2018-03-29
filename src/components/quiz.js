@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Row, Col, CardPanel } from 'react-materialize'
+import { Row, Col, CardPanel, Button } from 'react-materialize'
 
 var number = 1
 
@@ -54,8 +54,11 @@ class Quiz extends Component {
             <h5 className="options pointer grow" onClick={() => this.test(this.state.d)} waves='light'>{this.state.d}</h5>
           </div>
         </div>
+        <Button onClick={(e) => {
+          number++
+          this.componentDidMount()
+        }} waves='light'>Next</Button>
       </div>
-
     )
   }
 }
