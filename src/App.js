@@ -35,6 +35,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('app fname', this.state.fName)
     return (
       <BrowserRouter>
         <div className="App">
@@ -48,7 +49,9 @@ class App extends Component {
           <Route path="/signup" render={props => {
             return <CreateAccount saveUser={this.saveUser} {...props} />
           }} />
-          <Route path='/options' fName={this.state.fName} component={OptionsView} />
+          <Route path='/options' render={(props) => (
+            <OptionsView {...props} fName={this.state.fName} />
+          )} />
         </div>
       </BrowserRouter>
     );

@@ -20,7 +20,7 @@
   font-weight: 600;
   /* color: #CE796B; */
   /* orange */
-  color: #2C2C54;
+  color: #C99DA3;
   /* blue/black */
   padding-bottom: 3%;
 }
@@ -127,13 +127,13 @@
   margin-left: auto;
   margin-right: auto;
 }
-#formLogin, #createForm label{
+#formLogin label, #createForm label{
   font-size: 40px;
   color: #C99DA3;
   letter-spacing: 2px;
 }
 
-#formLogin, #createForm input {
+#formLogin input, #createForm input {
   font-size: 30px;
 }
 
@@ -146,7 +146,7 @@
   font-family: 'Hind', sans-serif;
   font-size: 25px;
   border: none;
-  color: #2C2C54;
+  color: #CE796B;
   letter-spacing: 2px;
   border: 2px solid #C99DA3;
   padding: 4px 7px;
@@ -154,8 +154,10 @@
 }
 
 .create {
+  font-family: 'Hind', sans-serif;
   color: #C99DA3;
   font-size: 35px;
+  letter-spacing: 2px;
 }
 
 .create:hover {
@@ -209,7 +211,7 @@
 .greeting{
   /* font-family: 'Hind', sans-serif; */
   /* font-weight: 600; */
-  font-family: 'Rufina', serif;
+  /* font-family: 'Rufina', serif; */
   letter-spacing: 3px;
   color: #CE796B;
   padding-top: 3%;
@@ -232,8 +234,8 @@
   font-weight: 700;
   /* border-radius: 120px 10px 120px 10px; */
   /* background-color: #C99DA3; */
-  color: #C99DA3;
-  text-shadow: 4px 4px #CE796B;
+  color: #CE796B;
+  border: 3px solid #C99DA3;
   padding: 15px 40px;
 }
 

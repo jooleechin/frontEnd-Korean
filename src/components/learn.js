@@ -7,7 +7,6 @@ let number = 1
 let percentage = 2.5
 
 class Learn extends Component {
-
   state = {
      number: 1,
      info: [],

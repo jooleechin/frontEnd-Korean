@@ -30,10 +30,10 @@ class Login extends Component {
           <label for="password" className="calisto">password: </label>
             <input name="password" id="password" type="password" />
           <div className="submitOcreate">
-            <input type="submit" value="submit" id="submit" className="calisto grow" />
+            <input type="submit" value="login" id="submit" className="calisto grow" />
           </div>
         </form>
-        <Link to="/signup"><h3 className="calisto grow tc create">create a new account!</h3></Link>
+        <Link to="/signup"><h3 className="grow tc create">create a new account!</h3></Link>
       </div>
     )
   }
