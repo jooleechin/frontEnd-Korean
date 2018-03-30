@@ -33,10 +33,10 @@ class Learn extends Component {
       <div>
       <Row className='column'>
           <Col>
-            <CardPanel className="pinkColor lighten-4 black-text tc card">
+            <div className="pinkColor lighten-4 black-text tc card">
               <span className="learnSymbol">{this.state.symbol}</span><br /><br />
               <span className="learnPronoun">{this.state.pronounciation}</span>
-            </CardPanel>
+            </div>
           </Col>
           <div className="navigateButt">
             <Button className="previous calisto tracked"onClick={(e) => {
