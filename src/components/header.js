@@ -24,7 +24,6 @@ class Header extends Component {
                     teach you how to speak/read basic korean characters. it utilizes spaced-repition,
                     which is an effective studying technique that was created from studying and analyzing how
                     the brain stores new information<br /><br /><br />
-                    tl;dr brain hack
                     <img src={require('../assets/brain.gif')} alt="brain gif" />
                   </p>
               </Modal>

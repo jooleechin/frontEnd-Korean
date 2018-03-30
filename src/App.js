@@ -18,7 +18,8 @@ class App extends Component {
       id: 0,
       fName: "",
       email: "",
-      quizShowing: false
+      quizShowing: false,
+      percentage: 0
     }
   }
   saveUser = (id, fName, email) => {
@@ -26,7 +27,8 @@ class App extends Component {
       id: id,
       fName: fName,
       email: email,
-      quizShowing: true
+      quizShowing: true,
+      percentage: 0
     })
   }
   clearUser = () => {
@@ -34,7 +36,13 @@ class App extends Component {
       id: 0,
       fName: "",
       email: "",
-      quizShowing: false
+      quizShowing: false,
+      percentage: 0
+    })
+  }
+  savePercentage = (number) => {
+    this.setState({
+      percentage: number
     })
   }
 
@@ -44,8 +52,12 @@ class App extends Component {
         <div className="App">
           <Header id={this.state.id} quizShowing={this.state.quizShowing} clearUser={this.clearUser}/>
           <Route exact path="/" component={SplashpageBody} />
-          <Route path="/learn" component={Learn} />
-          <Route path="/quiz" component={Quiz} />
+          <Route path="/learn" render={props => {
+            return <Learn savePercentage={this.savePercentage} percentage={this.state.percentage} {...props} />
+          }} />
+          <Route path="/quiz" render={props => {
+            return <Quiz savePercentage={this.savePercentage} percentage={this.state.percentage} {...props} />
+          }} />
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />
