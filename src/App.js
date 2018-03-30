@@ -56,7 +56,7 @@ class App extends Component {
             return <Learn savePercentage={this.savePercentage} percentage={this.state.percentage} {...props} />
           }} />
           <Route path="/quiz" render={props => {
-            return <Quiz savePercentage={this.savePercentage} percentage={this.state.percentage} {...props} />
+            return <Quiz id={this.state.id} savePercentage={this.savePercentage} percentage={this.state.percentage} {...props} />
           }} />
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
