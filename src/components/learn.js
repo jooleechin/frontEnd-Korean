@@ -30,7 +30,7 @@ class Learn extends Component {
     console.log('state', this.state)
     nanobar.go(percentage)
     return (
-      <div>
+      <div className='learnBox'>
       <Row className='column'>
           <Col>
             <CardPanel className="pinkColor lighten-4 black-text tc card">
