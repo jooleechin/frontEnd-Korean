@@ -16,7 +16,7 @@
 
 .hanja {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3.3vw;
+  font-size: 3.3em;
   font-weight: 600;
   /* color: #CE796B; */
   /* orange */
@@ -48,7 +48,7 @@
   color: #CE796B;
   /* orange */
   /* color: #2C2C54; */
-  font-size: 1.5vw;
+  font-size: 1.3em;
   border: 3px solid;
   padding: 5px 10px;
   display: inline-block;
@@ -74,7 +74,7 @@
 .spDesc {
   font-family: 'Hind', sans-serif;
   font-weight: 400;
-  font-size: 1.2vw;
+  font-size: 1.2em;
   letter-spacing: 2px;
 }
 
@@ -90,7 +90,7 @@
   position: relative;
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Hind', sans-serif; */
-  font-size: 5.2vw;
+  font-size: 5.4em;
   z-index: 0;
   color: #C99DA3;
 }
@@ -115,13 +115,10 @@
   color: #2C2C54;
   max-width: 75%;
   z-index: 99;
-  font-size: 2.5vw;
+  font-size: .4em;
 }
 
 /* learn.js cards */
-.learnBox{
-  max-height: 70vw;
-}
 
 .column {
   display: flex;
@@ -134,12 +131,12 @@
 }
 
 .learnSymbol {
-  font-size: 6vw;
+  font-size: 6em;
   color: white;
 }
 
 .learnPronoun {
-  font-size: 5.0vw;
+  font-size: 5.0em;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
@@ -176,13 +173,13 @@
   margin-right: auto;
 }
 #formLogin label, #createForm label{
-  font-size: 3.0vw;
+  font-size: 3.0em;
   color: #C99DA3;
   letter-spacing: 2px;
 }
 
 #formLogin input, #createForm input {
-  font-size: 2.5vw;
+  font-size: 2.3em;
 }
 
 .submitOcreate {
@@ -192,7 +189,7 @@
 
 #submit{
   font-family: 'Hind', sans-serif;
-  font-size: 25px;
+  font-size: 2.3em;
   border: none;
   color: #CE796B;
   letter-spacing: 2px;
@@ -204,7 +201,7 @@
 .create {
   font-family: 'Hind', sans-serif;
   color: #C99DA3;
-  font-size: 35px;
+  font-size: 2.4em;
   letter-spacing: 2px;
 }
 
@@ -226,7 +223,7 @@
 
 .quizSymbol {
   margin: 0px;
-  font-size: 8.0vw;
+  font-size: 8.0em;
   padding-bottom: 5%;
 }
 
@@ -241,7 +238,7 @@
   width: 25%;
   padding-top: 1%;
   padding-bottom: 1%;
-  font-size: 2.8vw;
+  font-size: 2.7em;
 }
 
 .correct {
@@ -274,12 +271,12 @@
   letter-spacing: 3px;
   color: #2C2C54;
   padding-top: 3%;
-  font-size: 2.8vw;
+  font-size: 2.7em;
 }
 
 .butts {
-  padding-top: 3%;
-  font-size: 1.5vw;
+  padding-top: 2%;
+  font-size: 1.4em;
   max-width: 40%;
   height: auto;
   margin-left: auto;
@@ -297,7 +294,8 @@
   /* color: #CE796B; */
   color: white;
   border: 3px solid #C99DA3;
-  padding: 10% 13% 10% 13%;
+  padding: .3em .8em;
+  text-align: center;
 }
 
 .butts h1:hover {
@@ -321,7 +319,7 @@
 .footer span {
   /* font-family: 'Hind', sans-serif; */
   /* font-weight: 600; */
-  font-size: 1.2vw;
+  font-size: 1.2em;
 }
 
 .footer a {

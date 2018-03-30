@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Button } from 'react-materialize'
 import Nanobar from 'nanobar'
+let baseURL = `https://learn-hanja.herokuapp.com`
 
 var number = 0
 
@@ -48,7 +49,7 @@ class Quiz extends Component {
       this.setState({[option]: 'correct'})
       debugger
       let {id, user_id, question_id}  = this.state.questionArray[number]
-      axios.put(`http://localhost:3000/users/usersquestions`, {user_id, question_id})
+      axios.put(`${baseURL}/users/usersquestions`, {user_id, question_id})
     } else {
       let correct = ['a', 'b', 'c', 'd'].find(option => this.state[option] == this.state.answer) + 'Correct'
       this.setState({
@@ -66,7 +67,7 @@ class Quiz extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/users/${this.props.id}/quiz`)
+    axios.get(`${baseURL}/users/${this.props.id}/quiz`)
       .then((response) => {
         this.setState({
           questionArray: response.data.quiz
