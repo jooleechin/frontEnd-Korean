@@ -30,7 +30,7 @@ class Learn extends Component {
     console.log('state', this.state)
     nanobar.go(percentage)
     return (
-      <div className='learnBox'>
+      <div>
       <Row className='column'>
           <Col>
             <CardPanel className="pinkColor lighten-4 black-text tc card">
@@ -38,29 +38,30 @@ class Learn extends Component {
               <span className="learnPronoun">{this.state.pronounciation}</span>
             </CardPanel>
           </Col>
+          <div className="navigateButt">
+            <Button className="previous calisto tracked"onClick={(e) => {
+              e.preventDefault()
+              if(number > 1) {
+                number--
+                percentage -= 2.5
+              }
+              nanobar.go(percentage)
+              this.componentDidMount()
+            }} waves='light'>Previous
+            </Button>
+            <Button className="next calisto tracked" onClick={(e) => {
+              e.preventDefault()
+              if (number < 40) {
+                number++
+                percentage += 2.5
+              }
+              nanobar.go(percentage)
+              this.componentDidMount()
+            }} waves='light'>Next
+            </Button>
+          </div>
       </Row>
-      <div className="navigateButt">
-        <Button className="previous tracked"onClick={(e) => {
-          e.preventDefault()
-          if(number > 1) {
-            number--
-            percentage -= 2.5
-          }
-          nanobar.go(percentage)
-          this.componentDidMount()
-        }} waves='light'>Previous
-        </Button>
-        <Button className="next tracked" onClick={(e) => {
-          e.preventDefault()
-          if (number < 40) {
-            number++
-            percentage += 2.5
-          }
-          nanobar.go(percentage)
-          this.componentDidMount()
-        }} waves='light'>Next
-        </Button>
-      </div>
+
     </div>
     )
   }
