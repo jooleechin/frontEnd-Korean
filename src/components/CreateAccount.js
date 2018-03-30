@@ -26,7 +26,7 @@ class CreateAccount extends Component {
             <input name="email" id="email" type="email" />
           <label for="password" className="calisto">password: </label>
             <input name="password" id="password" type="password" />
-          <input type="submit" value="submit" id="submit"/>
+          <input type="submit" value="submit" id="submit" className="grow"/>
         </form>
       </div>
     )

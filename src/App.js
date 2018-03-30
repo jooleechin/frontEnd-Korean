@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Quiz from './components/quiz'
 import CreateAccount from './components/CreateAccount'
 import OptionsView from './components/OptionsView'
+import Footer from './components/footer'
 
 class App extends Component {
   constructor(props) {
@@ -16,30 +17,32 @@ class App extends Component {
     this.state = {
       id: 0,
       fName: "",
-      email: ""
+      email: "",
+      quizShowing: false
     }
   }
   saveUser = (id, fName, email) => {
     this.setState({
       id: id,
       fName: fName,
-      email: email
+      email: email,
+      quizShowing: true
     })
   }
   clearUser = () => {
     this.setState({
       id: 0,
       fName: "",
-      email: ""
+      email: "",
+      quizShowing: false
     })
   }
 
   render() {
-    console.log('app fname', this.state.fName)
     return (
       <BrowserRouter>
         <div className="App">
-          <Header id={this.state.id} clearUser={this.clearUser}/>
+          <Header id={this.state.id} quizShowing={this.state.quizShowing} clearUser={this.clearUser}/>
           <Route exact path="/" component={SplashpageBody} />
           <Route path="/learn" component={Learn} />
           <Route path="/quiz" component={Quiz} />
@@ -52,6 +55,7 @@ class App extends Component {
           <Route path='/options' render={(props) => (
             <OptionsView {...props} fName={this.state.fName} />
           )} />
+          <Footer />
         </div>
       </BrowserRouter>
     );

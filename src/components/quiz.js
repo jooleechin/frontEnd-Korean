@@ -6,11 +6,10 @@ import Nanobar from 'nanobar'
 var number = 1
 
 const Next = (props) => {
-  // console.log(nextQuest)
-  return (<Button onClick={(e) => {
+  return (<h1 onClick={(e) => {
     number++
     props.nextQuest()
-  }} waves='light'>Next</Button>)
+  }} waves='light' className="quizButt pointer grow">next</h1>)
 }
 
 class Quiz extends Component {
@@ -91,7 +90,6 @@ class Quiz extends Component {
   render() {
     return (
       <div>
-
         <div className="quizCard pinkColor tc">
           <h2 className="quizSymbol">{this.state.question}</h2>
           <div className="allOptions calisto">
@@ -102,8 +100,10 @@ class Quiz extends Component {
             <h5 className={`options pointer grow ${this.state.cCorrect} `} onClick={() => this.test(this.state.c, 'c')} waves='light'>{this.state.c}</h5>
             <h5 className={`options pointer grow ${this.state.dCorrect} `} onClick={() => this.test(this.state.d, 'd')} waves='light'>{this.state.d}</h5>
           </div>
+          <div className="nextButton">
+            {!this.state.hideNext && <Next nextQuest={this.nextQuest}/>}
+          </div>
         </div>
-        {!this.state.hideNext && <Next nextQuest={this.nextQuest}/>}
       </div>
     )
   }
