@@ -45,7 +45,9 @@ class App extends Component {
           <Header id={this.state.id} quizShowing={this.state.quizShowing} clearUser={this.clearUser}/>
           <Route exact path="/" component={SplashpageBody} />
           <Route path="/learn" component={Learn} />
-          <Route path="/quiz" component={Quiz} />
+          <Route path="/quiz" render={props => {
+            return <Quiz id={this.state.id} {...props} />
+          }} />
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />

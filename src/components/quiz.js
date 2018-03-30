@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Button } from 'react-materialize'
 import Nanobar from 'nanobar'
 
-var number = 1
+var number = 0
 
 const Next = (props) => {
   return (<h1 onClick={(e) => {
@@ -14,6 +14,7 @@ const Next = (props) => {
 
 class Quiz extends Component {
   state = {
+    questionArray: [],
      hideNext: true,
      question: '',
      a: '',
@@ -45,6 +46,9 @@ class Quiz extends Component {
     }
     if(userGuess === this.state.answer) {
       this.setState({[option]: 'correct'})
+      debugger
+      let {id, user_id, question_id}  = this.state.questionArray[number]
+      axios.put(`http://localhost:3000/users/usersquestions`, {user_id, question_id})
     } else {
       let correct = ['a', 'b', 'c', 'd'].find(option => this.state[option] == this.state.answer) + 'Correct'
       this.setState({
@@ -62,7 +66,14 @@ class Quiz extends Component {
   }
 
   componentDidMount() {
-    this.nextQuest()
+    axios.get(`http://localhost:3000/users/${this.props.id}/quiz`)
+      .then((response) => {
+        this.setState({
+          questionArray: response.data.quiz
+        })
+        this.nextQuest()
+      })
+
   }
 
   nextQuest = () => {
@@ -73,18 +84,16 @@ class Quiz extends Component {
       cCorrect: null,
       dCorrect: null
     })
-     axios.get(`http://localhost:3000/questions/${number}`)
-       .then((response) => {
-         const info = response.data;
+    let question = this.state.questionArray[number]
          this.setState({
-           question: info.question.question,
-           a: info.question.a,
-           b: info.question.b,
-           c: info.question.c,
-           d: info.question.d,
-           answer: info.question.answer
+           question: question.question,
+           a: question.a,
+           b: question.b,
+           c: question.c,
+           d: question.d,
+           answer: question.answer
          })
-       })
+
   }
   render() {
     return (
