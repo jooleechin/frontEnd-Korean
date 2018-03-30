@@ -119,6 +119,10 @@
 }
 
 /* learn.js cards */
+.learnBox{
+  max-height: 80%;
+}
+
 .column {
   display: flex;
   justify-content: center;
