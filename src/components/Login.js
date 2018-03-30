@@ -13,6 +13,7 @@ class Login extends Component {
       let name = data.data.matches.fName
       if (data.data.matches) {
         this.props.saveUser(id, name, email)
+        this.props.history.push('/options')
       } else {
         alert('Your password is not correct!')
       }
@@ -28,9 +29,11 @@ class Login extends Component {
             <input name="email" id="email" type="email" />
           <label for="password" className="calisto">password: </label>
             <input name="password" id="password" type="password" />
-          <input type="submit" value="submit" />
+          <div className="submitOcreate">
+            <input type="submit" value="login" id="submit" className="calisto grow" />
+          </div>
         </form>
-        <Link to="/signup"><h3>Create a new Account!</h3></Link>
+        <Link to="/signup"><h3 className="grow tc create">create a new account!</h3></Link>
       </div>
     )
   }

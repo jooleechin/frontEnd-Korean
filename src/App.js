@@ -35,6 +35,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('app fname', this.state.fName)
     return (
       <BrowserRouter>
         <div className="App">
@@ -45,8 +46,12 @@ class App extends Component {
           <Route exact path="/login" render={props => {
             return <Login saveUser={this.saveUser} clearUser={this.clearUser} {...props} />
           }} />
-          <Route path="/signup" component={CreateAccount} />
-          <Route path='/options' component={OptionsView} />
+          <Route path="/signup" render={props => {
+            return <CreateAccount saveUser={this.saveUser} {...props} />
+          }} />
+          <Route path='/options' render={(props) => (
+            <OptionsView {...props} fName={this.state.fName} />
+          )} />
         </div>
       </BrowserRouter>
     );
