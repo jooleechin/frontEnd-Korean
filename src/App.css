@@ -16,7 +16,7 @@
 
 .hanja {
   font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
+  font-size: 3.3vw;
   font-weight: 600;
   /* color: #CE796B; */
   /* orange */
@@ -43,14 +43,45 @@
   min-width: 250px;
 }
 
+
 .signLog {
   color: #CE796B;
   /* orange */
   /* color: #2C2C54; */
-  font-size: 20px;
+  font-size: 1.5vw;
   border: 3px solid;
   padding: 5px 10px;
   display: inline-block;
+}
+
+.modal {
+  background-color: #C99DA3;
+  color: white;
+  width: 40%;
+  height: 35%;
+}
+
+.modal-content h4 {
+  font-family: 'Hind', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.modal-footer {
+  display: none;
+}
+
+.spDesc {
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+}
+
+.spDesc img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* SplashpageBody.js styles */
@@ -59,7 +90,7 @@
   position: relative;
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Hind', sans-serif; */
-  font-size: 70px;
+  font-size: 5.2vw;
   z-index: 0;
   color: #C99DA3;
 }
@@ -84,7 +115,7 @@
   color: #2C2C54;
   max-width: 75%;
   z-index: 99;
-  font-size: 35px;
+  font-size: 2.5vw;
 }
 
 /* learn.js cards */
@@ -98,12 +129,12 @@
 }
 
 .learnSymbol {
-  font-size: 80px;
+  font-size: 6vw;
   color: white;
 }
 
 .learnPronoun {
-  font-size: 70px;
+  font-size: 5.0vw;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
@@ -128,13 +159,13 @@
   margin-right: auto;
 }
 #formLogin label, #createForm label{
-  font-size: 40px;
+  font-size: 3.0vw;
   color: #C99DA3;
   letter-spacing: 2px;
 }
 
 #formLogin input, #createForm input {
-  font-size: 30px;
+  font-size: 2.5vw;
 }
 
 .submitOcreate {
@@ -168,17 +199,17 @@
 /* quiz.js */
 .quizCard {
   font-family: 'Montserrat', sans-serif;
-  width: 40%;
+  width: 60%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px 0px;
+  padding: 45px 0px;
   color: white;
 }
 
 .quizSymbol {
   margin: 0px;
-  font-size: 100px;
+  font-size: 8.0vw;
   padding-bottom: 5%;
 }
 
@@ -189,39 +220,51 @@
 }
 
 .options {
-  border: 2px dotted black;
-  width: 140px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 35px;
+  border: 2px solid black;
+  width: 25%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 2.8vw;
 }
 
 .correct {
   /* background-color: #8A9B68; */
   background-color: #749C75;
   color: white;
-  border: 2px dotted black;
 }
 
 .incorrect {
   background-color: #D33F49;
 }
 
+.nextButton{
+  padding-top: 2%;
+}
+
+.quizButt{
+  display: inline-block;
+  background-color: white;
+  color: #CE796B;
+  padding: 10px 20px;
+  margin-bottom: 0;
+}
+
 /* optionsView */
 .greeting{
-  /* font-family: 'Hind', sans-serif; */
-  /* font-weight: 600; */
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
   /* font-family: 'Rufina', serif; */
   letter-spacing: 3px;
-  color: #CE796B;
+  color: #2C2C54;
   padding-top: 3%;
-  font-size: 45px;
+  font-size: 2.8vw;
 }
 
 .butts {
-  padding-top: 5%;
-  font-size: 30px;
-  width: 50%;
+  padding-top: 3%;
+  font-size: 1.5vw;
+  max-width: 40%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -230,15 +273,41 @@
 }
 
 .butts h1 {
-  font-family: 'Hind', sans-serif;
-  font-weight: 700;
-  /* border-radius: 120px 10px 120px 10px; */
+  /* font-family: 'Hind', sans-serif; */
+  font-weight: 600;
   /* background-color: #C99DA3; */
-  color: #CE796B;
+  background-color: #CE796B;
+  /* color: #CE796B; */
+  color: white;
   border: 3px solid #C99DA3;
-  padding: 15px 40px;
+  padding: 10% 13% 10% 13%;
 }
 
 .butts h1:hover {
   opacity: .66;
+}
+
+/* footer.js */
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  background-color: #C99DA3;
+  text-align: center;
+  opacity: .66;
+  height: 6%;
+}
+
+.footer span {
+  /* font-family: 'Hind', sans-serif; */
+  /* font-weight: 600; */
+  font-size: 1.2vw;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: white;
 }

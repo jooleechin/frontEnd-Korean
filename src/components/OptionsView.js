@@ -7,9 +7,9 @@ class OptionsView extends Component {
 
     return(
       <div className='box'>
-        <h2 className='greeting tc b calisto'>greetings, {this.props.fName}! please pick a path you want to discover.
+        <h2 className='greeting tc b'>greetings, {this.props.fName}! please pick a path you want to discover.
         <br />happy learning :)</h2>
-        <div className="butts">
+        <div className="butts calisto">
           <Link to='/learn'><h1 className="grow pointer">learn</h1></Link>
           <Link to='/quiz'><h1 className="grow pointer">quiz</h1></Link>
         </div>
