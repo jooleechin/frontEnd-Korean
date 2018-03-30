@@ -26,9 +26,9 @@ class Login extends Component {
       <div className="box2">
         <form id="formLogin" onSubmit={this.loginCheck}>
           <label for="email" className="calisto">email: </label>
-            <input name="email" id="email" type="email" />
+            <input name="email" id="email" type="email" required/>
           <label for="password" className="calisto">password: </label>
-            <input name="password" id="password" type="password" />
+            <input name="password" id="password" type="password" required/>
           <div className="submitOcreate">
             <input type="submit" value="login" id="submit" className="calisto grow" />
           </div>

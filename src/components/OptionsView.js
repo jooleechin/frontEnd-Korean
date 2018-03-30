@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+
 class OptionsView extends Component {
   render() {
     console.log('options fName', this.props)
-
     return(
       <div className='box'>
         <h2 className='greeting tc b'>greetings, {this.props.fName}! please pick a path you want to discover.

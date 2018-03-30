@@ -7,6 +7,7 @@ class CreateAccount extends Component {
     let fName = e.target.name.value
     let email = e.target.email.value
     let password = e.target.password.value
+    if (!fName || !email || !password) return
     axios.post('/signup', { fName, email, password })
     .then (data => {
       let id = data.data[0].id
@@ -20,17 +21,27 @@ class CreateAccount extends Component {
     return(
       <div className="box2">
         <form id="createForm" onSubmit={this.createCheck}>
-          <label for="name" className="calisto">first name: </label>
-            <input name="name" id="name" type="text" />
-          <label for="email" className="calisto">email: </label>
-            <input name="email" id="email" type="email" />
-          <label for="password" className="calisto">password: </label>
-            <input name="password" id="password" type="password" />
-          <input type="submit" value="submit" id="submit" className="grow"/>
+            <label for="name" className="calisto">first name: </label>
+              <input name="name" id="name" type="text" required autofocus />
+            <label for="email" className="calisto">email: </label>
+              <input name="email" id="email" type="email" required />
+            <label for="password" className="calisto">password: </label>
+              <input name="password" id="password" type="password" required />
+            <input type="submit" value="submit" id="submit" className="grow"/>
         </form>
       </div>
     )
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 export default CreateAccount

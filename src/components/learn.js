@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Nanobar from 'nanobar'
-import { Row, Col, CardPanel, Button } from 'react-materialize'
-let nanobar = new Nanobar()
-let number = 1
-let percentage = 2.5
+import { Row, Col, Button } from 'react-materialize'
 
 class Learn extends Component {
   state = {
@@ -12,11 +9,13 @@ class Learn extends Component {
      info: [],
      learn: '',
      symbol: '',
-     pronounciation: ''
+     pronounciation: '',
+     nanobar: new Nanobar(this.props.percentage),
+     percentage: this.props.percentage || 2.5
   }
 
   componentDidMount() {
-     axios.get(`http://localhost:3000/learn/${number}`)
+     axios.get(`http://localhost:3000/learn/${this.state.number}`)
        .then((response) => {
          console.log('test', response.data.learn)
          const info = response.data;
@@ -26,9 +25,16 @@ class Learn extends Component {
          })
        })
   }
+
+  componentWillUnmount() {
+
+    this.state.nanobar.el.parentNode.removeChild(this.state.nanobar.el)
+    this.props.savePercentage(this.state.percentage)
+  }
+
   render() {
-    console.log('state', this.state)
-    nanobar.go(percentage)
+    console.log(this.props)
+    this.state.nanobar.go(this.state.percentage)
     return (
       <div>
       <Row className='column'>
@@ -41,21 +47,25 @@ class Learn extends Component {
           <div className="navigateButt">
             <Button className="previous calisto tracked"onClick={(e) => {
               e.preventDefault()
-              if(number > 1) {
-                number--
-                percentage -= 2.5
+              if(this.state.number > 1) {
+                this.setState({
+                  number: this.state.number-1,
+                  percentage: this.state.percentage-2.5
+                })
               }
-              nanobar.go(percentage)
+              this.state.nanobar.go(this.state.percentage)
               this.componentDidMount()
             }} waves='light'>Previous
             </Button>
             <Button className="next calisto tracked" onClick={(e) => {
               e.preventDefault()
-              if (number < 40) {
-                number++
-                percentage += 2.5
+              if (this.state.number < 40) {
+                this.setState({
+                  number: this.state.number-1,
+                  percentage: this.state.percentage+2.5
+                })
               }
-              nanobar.go(percentage)
+              this.state.nanobar.go(this.state.percentage)
               this.componentDidMount()
             }} waves='light'>Next
             </Button>
