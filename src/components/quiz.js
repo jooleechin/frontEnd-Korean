@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Button } from 'react-materialize'
 import Nanobar from 'nanobar'
-let baseURL = `https://learn-hanja.herokuapp.com`
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `http://localhost:3001`
+
 
 var number = 0
 
@@ -47,7 +49,6 @@ class Quiz extends Component {
     }
     if(userGuess === this.state.answer) {
       this.setState({[option]: 'correct'})
-      debugger
       let {id, user_id, question_id}  = this.state.questionArray[number]
       axios.put(`${baseURL}/users/usersquestions`, {user_id, question_id})
     } else {
@@ -74,7 +75,6 @@ class Quiz extends Component {
         })
         this.nextQuest()
       })
-
   }
 
   nextQuest = () => {
@@ -86,16 +86,16 @@ class Quiz extends Component {
       dCorrect: null
     })
     let question = this.state.questionArray[number]
-         this.setState({
-           question: question.question,
-           a: question.a,
-           b: question.b,
-           c: question.c,
-           d: question.d,
-           answer: question.answer
-         })
-
+    this.setState({
+      question: question.question,
+      a: question.a,
+      b: question.b,
+      c: question.c,
+      d: question.d,
+      answer: question.answer
+    })
   }
+
   render() {
     return (
       <div>

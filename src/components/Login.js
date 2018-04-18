@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-let baseURL = `https://learn-hanja.herokuapp.com`
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `http://localhost:3001`
 
 class Login extends Component {
   loginCheck = (e) => {

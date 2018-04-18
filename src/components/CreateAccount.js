@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-let baseURL = `https://learn-hanja.herokuapp.com`
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `http://localhost:3001`
 
 class CreateAccount extends Component {
   createCheck = (e) => {
@@ -8,7 +9,6 @@ class CreateAccount extends Component {
     let fName = e.target.name.value
     let email = e.target.email.value
     let password = e.target.password.value
-    if (!fName || !email || !password) return
     axios.post(`${baseURL}/signup`, { fName, email, password })
     .then (data => {
       let id = data.data[0].id

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Nanobar from 'nanobar'
 import { Row, Col, Button } from 'react-materialize'
-let baseURL = `https://learn-hanja.herokuapp.com`
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `https://localhost:3001`
 
 class Learn extends Component {
   state = {
