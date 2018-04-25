@@ -20,7 +20,7 @@ class Header extends Component {
                 header='안녕하새요 (hello)'
                 trigger={<NavItem className="dropDowns">how it works</NavItem>}>
                   <p className="spDesc">
-                    welcome to hån(:)jå, a website created with react.js that will
+                    welcome to hån(:)gül, a website created with react.js that will
                     teach you how to speak/read basic korean characters. it utilizes spaced-repition,
                     which is an effective studying technique that was created from studying and analyzing how
                     the brain stores new information<br /><br /><br />
@@ -32,7 +32,7 @@ class Header extends Component {
             </Dropdown>
           </Col>
           <Col s={10}>
-            <Link to="/"><h1 className="hanja  grow tracked tc mt0">hån(:)jå</h1></Link>
+            <Link to="/"><h1 className="hanja  grow tracked tc mt0">hån(:)gül</h1></Link>
           </Col>
           <Col s={1}>
             {this.changeToLogout()}

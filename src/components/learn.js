@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Nanobar from 'nanobar'
 import { Row, Col, Button } from 'react-materialize'
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `https://localhost:3001`
 
 class Learn extends Component {
   state = {
@@ -15,9 +17,8 @@ class Learn extends Component {
   }
 
   componentDidMount() {
-     axios.get(`http://localhost:3000/learn/${this.state.number}`)
+     axios.get(`${baseURL}/learn/${this.state.number}`)
        .then((response) => {
-         console.log('test', response.data.learn)
          const info = response.data;
          this.setState({
            symbol: info.learn.symbol,
@@ -27,14 +28,12 @@ class Learn extends Component {
   }
 
   componentWillUnmount() {
-
     this.state.nanobar.el.parentNode.removeChild(this.state.nanobar.el)
     this.props.savePercentage(this.state.percentage)
   }
 
   render() {
-    console.log(this.props)
-    this.state.nanobar.go(this.state.percentage)
+    // this.state.nanobar.go(this.state.percentage)
     return (
       <div>
       <Row className='column'>
@@ -61,7 +60,7 @@ class Learn extends Component {
               e.preventDefault()
               if (this.state.number < 40) {
                 this.setState({
-                  number: this.state.number-1,
+                  number: this.state.number+1,
                   percentage: this.state.percentage+2.5
                 })
               }

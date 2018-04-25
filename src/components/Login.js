@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+// let baseURL = `https://learn-hangul.herokuapp.com`
+let baseURL = `http://localhost:3001`
 
 class Login extends Component {
   loginCheck = (e) => {
     e.preventDefault()
     let email = e.target.email.value
     let password = e.target.password.value
-    axios.post('/login', { email, password })
+    axios.post(`${baseURL}/login`, { email, password })
     .then (data => {
       let id = data.data.matches.id
       let name = data.data.matches.fName
