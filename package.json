@@ -8,6 +8,7 @@
     "nanobar": "^0.4.2",
     "npm": "^5.8.0",
     "react": "^16.2.0",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.2.0",
     "react-materialize": "^2.1.2",
     "react-nanobar": "^1.0.0",
